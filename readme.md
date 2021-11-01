@@ -76,9 +76,7 @@ On the url, copy and save the bus stop number, e.g.: "1980SN121003"
 
 `nano Bluestar_extract.py`   (or use vim or your favorite text editor)
 
-Change the number in the "url_stop_name" variable and if you want, the comment after the hash #:
-
-´url_stop_name = "1980SN121003" #Bargate´
+Change the number in the "url_stop_name" variable and if you want, the comment after the hash #:   `url_stop_name = "1980SN121003" #Bargate`
 
 To save the changes, Ctrl+O, press Enter and then Ctrl+X 
 
@@ -92,10 +90,10 @@ To stop execution, Ctrl+C
 ### Run code from start up
 #### Raspbian
 crontab -e
-@reboot sleep 30 && cd /home/pi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &
+`@reboot sleep 30 && cd /home/pi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &`
 
 #### Dietpi
-@reboot sleep 30 && cd /home/dietpi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &
+`@reboot sleep 30 && cd /home/dietpi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &`
 
 # Credits
  jvteleco
