@@ -91,8 +91,7 @@ For the OLED Display:  `python3  main_oled_bluestar.py`
 
 ![](web_files/OLED_Bus.gif)
 
-
-To stop execution, Ctrl+C
+To stop execution, `Ctrl+C`
 
 ### Run code from start up
 #### Raspbian
