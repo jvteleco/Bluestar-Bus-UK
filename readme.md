@@ -4,7 +4,7 @@ https://www.bluestarbus.co.uk
 ![](web_files/working.gif)
 
 Use the  Bluestar_extract.py  to just display on your console the info.
-Use  main_oled_bluestar.py to display on the OLED.
+Use  main_oled_bluestar.py to display on the OLED. You can use the arrows to navigate through the list and the buttons to refresh the data.
 
 The OLED module by default is configured as SPI. It can be changed to I2C by soldering the resistors on the back of the unit.
 The OLED library has the I2C definitions, but it has not been tested.
@@ -64,7 +64,7 @@ sudo reboot
  Download the code and extract it to your home folder. Rename the folder to your own preference. For example: bluestarbus
 
 ## Run
-### Obtain the bust stop number
+### Obtain the bus stop number
 First, you need to go to the Bluestar bus webpage and click on "Plan your journey" (https://www.bluestarbus.co.uk/plan-your-journey)
 Now type your bus stop or use "Find your stop on the map". For example, "Southampton, Bargate Street Stop"
 ![](web_files/bluestar_map.png)
@@ -95,7 +95,8 @@ To stop execution, `Ctrl+C`
 
 ### Run code from start up
 #### Raspbian
-crontab -e
+`crontab -e`
+
 `@reboot sleep 30 && cd /home/pi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &`
 
 #### Dietpi
