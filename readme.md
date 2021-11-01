@@ -4,6 +4,8 @@ https://www.bluestarbus.co.uk
 Use the  Bluestar_extract.py  to just display on your console the info.
 Use  main_oled_bluestar.py to display on the OLED. You can use the arrows to navigate through the list and the buttons to refresh the data.
 
+![](web_files/OLED_Bus.gif)
+
 The OLED module by default is configured as SPI. It can be changed to I2C by soldering the resistors on the back of the unit.
 The OLED library has the I2C definitions, but it has not been tested.
 
