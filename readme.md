@@ -93,6 +93,8 @@ To stop execution, `Ctrl+C`
 ### Run code from start up
 NOTE 2021: I have not tested this again. It should work (rename the folder name if required).
 #### Dietpi
+`crontab -e`
+
 `@reboot sleep 30 && cd /home/dietpi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &`
 
 #### Raspbian
@@ -102,4 +104,4 @@ NOTE 2021: I have not tested this again. It should work (rename the folder name 
 
 
 # Credits
- jvteleco
+ jvteleco 2021
