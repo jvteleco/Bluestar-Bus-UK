@@ -1,14 +1,11 @@
 # Bluestar UK buses departure display with a Raspberry Pi.  Optionally, use an OLED display to display and navigate.
 https://www.bluestarbus.co.uk
 
-![](web_files/working.gif)
-
 Use the  Bluestar_extract.py  to just display on your console the info.
 Use  main_oled_bluestar.py to display on the OLED. You can use the arrows to navigate through the list and the buttons to refresh the data.
 
 The OLED module by default is configured as SPI. It can be changed to I2C by soldering the resistors on the back of the unit.
 The OLED library has the I2C definitions, but it has not been tested.
-
 
 ## Hardware
  Raspberry Pi (tested on Raspberry Pi 3 and Zero)
@@ -94,13 +91,15 @@ For the OLED Display:  `python3  main_oled_bluestar.py`
 To stop execution, `Ctrl+C`
 
 ### Run code from start up
+NOTE 2021: I have not tested this again. It should work (rename the folder name if required).
+#### Dietpi
+`@reboot sleep 30 && cd /home/dietpi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &`
+
 #### Raspbian
 `crontab -e`
 
 `@reboot sleep 30 && cd /home/pi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &`
 
-#### Dietpi
-`@reboot sleep 30 && cd /home/dietpi/bluestarbus && /usr/bin/python ./main_oled_bluestar.py &`
 
 # Credits
  jvteleco
