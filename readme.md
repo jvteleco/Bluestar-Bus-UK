@@ -68,15 +68,18 @@ On the url, copy and save the bus stop number, e.g.: "1980SN121003"
 ![](web_files/bluestar_stop.png)
 
 ### Modify the code
-cd bluestarbus
-nano Bluestar_extract.py   (or use vim or your favorite text editor)
+`cd bluestarbus`
+
+`nano Bluestar_extract.py`   (or use vim or your favorite text editor)
 
 Change the number in the "url_stop_name" variable and if you want, the comment after the hash #.
 ´url_stop_name = "1980SN121003" #Bargate´
 
 To save the changes, Ctrl+O, press Enter and then Ctrl+X 
 
-python  main_oled_bluestar.py
+For your console:  `python  Bluestar_extract.py`
+
+For the OLED Display:  `python  main_oled_bluestar.py`
 
 
 To stop execution, Ctrl+C
