@@ -70,7 +70,8 @@ Now type your bus stop or use "Find your stop on the map". For example, "Southam
 ![](web_files/bluestar_map.png)
 
 On the url, copy and save the bus stop number, e.g.: "1980SN121003"  
-(Underlined in red in the following image)
+(Underlined in red in the following image):
+
 ![](web_files/bluestar_stop.png)
 
 ### Modify the code
@@ -84,10 +85,11 @@ To save the changes, Ctrl+O, press Enter and then Ctrl+X
 
 For your console:  `python3  Bluestar_extract.py`
 
-![](web_files/Console Bus.png)
+![](web_files/Console_Bus.png)
 
 For the OLED Display:  `python3  main_oled_bluestar.py`
-![](web_files/OLED Bus.gif)
+
+![](web_files/OLED_Bus.gif)
 
 
 To stop execution, Ctrl+C
