@@ -24,6 +24,7 @@ The OLED library has the I2C definitions, but it has not been tested.
 ### Installing dependencies
 #### Raspbian
 
+````
 ip a
 sudo raspi-config   (activate I2C and SPI)
 sudo apt update
@@ -35,9 +36,11 @@ pip3 install spidev
 pip3 install pillow
 sudo apt-get install libopenjp2-7
 sudo reboot
+````
 
 #### Dietpi 
-login as root
+login as root:
+````
 dietpi-config
 4-Advanced Options  ->  SPI_State = ON and optionally, also I2C State = ON
 reboot
@@ -49,10 +52,11 @@ pip3 install spidev
 pip3 install pillow
 sudo apt-get install libopenjp2-7
 reboot
+````
 
 ### Checks
-ls /sys/class/spi*
-lsmod | grep spi
+`ls /sys/class/spi*`
+`lsmod | grep spi`
 
 ## Download
  Download the code and extract it to your home folder. Rename the folder to your own preference. For example: bluestarbus
@@ -72,7 +76,8 @@ On the url, copy and save the bus stop number, e.g.: "1980SN121003"
 
 `nano Bluestar_extract.py`   (or use vim or your favorite text editor)
 
-Change the number in the "url_stop_name" variable and if you want, the comment after the hash #.
+Change the number in the "url_stop_name" variable and if you want, the comment after the hash #:
+
 ´url_stop_name = "1980SN121003" #Bargate´
 
 To save the changes, Ctrl+O, press Enter and then Ctrl+X 
