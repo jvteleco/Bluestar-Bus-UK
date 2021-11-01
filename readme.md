@@ -12,31 +12,17 @@ The OLED library has the I2C definitions, but it has not been tested.
 
 ## Hardware
  Raspberry Pi (tested on Raspberry Pi 3 and Zero)
- Waveshare 1.3 inch OLED HAT https://www.waveshare.com/wiki/1.3inch_OLED_HAT (Aliexpress or Ebay)
+ Optionally: Waveshare 1.3 inch OLED HAT https://www.waveshare.com/wiki/1.3inch_OLED_HAT (Aliexpress or Ebay)
 
 ![](web_files/hardware.jpeg)
 
 ## Software
- 
- Raspbian lite installation or Dietpi:
+ - Python3
+ - Dietpi OS https://www.dietpi.com  or  Rasperry Pi OS:
 
 
 ### Installing dependencies
-#### Raspbian
 
-````
-ip a
-sudo raspi-config   (activate I2C and SPI)
-sudo apt update
-sudo apt upgrade
-sudo apt install i2c-tools python3-smbus
-sudo apt install python3-rpi.gpio
-pip3 install beautifulsoup4
-pip3 install spidev
-pip3 install pillow
-sudo apt-get install libopenjp2-7
-sudo reboot
-````
 
 #### Dietpi 
 login as root:
@@ -52,6 +38,22 @@ pip3 install spidev
 pip3 install pillow
 sudo apt-get install libopenjp2-7
 reboot
+````
+
+#### Rasperry Pi OS
+NOTE: not tested, some packages may be missing.
+````
+ip a
+sudo raspi-config   (activate I2C and SPI)
+sudo apt update
+sudo apt upgrade
+sudo apt install i2c-tools python3-smbus
+sudo apt install python3-rpi.gpio
+pip3 install beautifulsoup4
+pip3 install spidev
+pip3 install pillow
+sudo apt-get install libopenjp2-7
+sudo reboot
 ````
 
 ### Checks
@@ -80,9 +82,12 @@ Change the number in the "url_stop_name" variable and if you want, the comment a
 
 To save the changes, Ctrl+O, press Enter and then Ctrl+X 
 
-For your console:  `python  Bluestar_extract.py`
+For your console:  `python3  Bluestar_extract.py`
 
-For the OLED Display:  `python  main_oled_bluestar.py`
+![](web_files/Console Bus.png)
+
+For the OLED Display:  `python3  main_oled_bluestar.py`
+![](web_files/OLED Bus.gif)
 
 
 To stop execution, Ctrl+C
